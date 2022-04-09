@@ -1,0 +1,21 @@
+version: "3"
+networks:
+  lumen:
+services:
+  lumen:
+    container_name: lumen_service
+    build:
+      context: ./
+      dockerfile: .docker/lumen/Dockerfile
+      args:
+        APP_ENV: LOCAL
+    ports:
+      - 8085:80
+    environment:
+      APP_TIMEZONE: Asia/Manila
+    volumes:
+      - ./lumen:/var/www/html/lumen
+      - /var/www/html/lumen/vendor
+      - /var/www/html/lumen/storage
+    networks:
+      - lumen
