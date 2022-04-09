@@ -71,7 +71,8 @@ RUN php /usr/bin/composer clearcache
 RUN php /usr/bin/composer install
 RUN php /usr/bin/composer dump-autoload
 
-RUN php artisan jwt:secret
+RUN php /var/www/html/lumen/artisan migrate
+RUN php /var/www/html/lumen/artisan db:seed
 
 EXPOSE 22 80 443
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]

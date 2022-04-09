@@ -34,7 +34,7 @@ class ClientController extends Controller
         return $this->dataResponse("Sucessfully retrieved.", $client);
     }
     
-    public function show( Client $client )
+    public function show( $id )
     {   
         dump($client);
         // return $this->dataResponse("Sucessfully retrieved.", ClientResource::collection($client));
