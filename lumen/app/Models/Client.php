@@ -3,11 +3,12 @@
 namespace App\Models;
 
 use App\Models\Core;
+use Jenssegers\Mongodb\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Client extends Core
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
     
     protected $collection = 'client';
 

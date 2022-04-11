@@ -27,6 +27,8 @@ $router->group(['prefix' => 'auth'], function ($router) {
 $router->group(['prefix' => 'client','middleware' => 'auth'], function ($router) {
 
     $router->get('/', 'ClientController@index');
+    $router->post('/', 'ClientController@store');
     $router->get('/{client}', 'ClientController@show');
     $router->put('/{client}', 'ClientController@update');
+    $router->delete('/', 'ClientController@destroy');
 });

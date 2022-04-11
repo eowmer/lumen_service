@@ -58,9 +58,17 @@ ADD .env /var/www/html/lumen
 
 # set permission
 WORKDIR /var/www/html/lumen
+
 RUN touch /var/www/html/lumen/storage/logs/lumen.log
+RUN touch /var/www/html/lumen/storage/framework/sessions/session.log
 RUN chmod -R 777 /var/www/html/lumen/storage/
 RUN chmod -R 777 /var/www/html/lumen/storage/logs/
+
+USER root
+RUN mkdir -p /var/www/html/lumen/storage/framework/sessions
+RUN chmod -R gu+w /var/www/html/lumen/storage
+RUN chmod -R guo+w /var/www/html/lumen/storage
+
 # incase not working
 # docker-compose exec lumen chmod -R 777 /var/www/html/lumen/storage
 
@@ -73,6 +81,8 @@ RUN php /usr/bin/composer dump-autoload
 
 RUN php /var/www/html/lumen/artisan migrate
 RUN php /var/www/html/lumen/artisan db:seed
+
+#set storage permission
 
 EXPOSE 22 80 443
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]

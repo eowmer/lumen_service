@@ -12,6 +12,7 @@
         "illuminate/session": "^8.83",
         "jenssegers/mongodb": "^3.8",
         "laravel/lumen-framework": "^8.0",
+        "mmghv/lumen-route-binding": "^1.5",
         "pearl/lumen-request-validate": "^1.7"
     },
     "require-dev": {

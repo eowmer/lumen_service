@@ -24,8 +24,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials,$remember)) {
             $session = $request->session()->regenerate();
-            
-            $token = $request->session()->get('_token');
+            $request->session()->get('_token');
             $data = ['user' => Auth::user(), 'token' => $request->session()->get('_token')];
             return $this->dataResponse("Sucessfully logged in.", $data);
         }

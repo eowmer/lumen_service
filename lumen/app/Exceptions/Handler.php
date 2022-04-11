@@ -62,7 +62,7 @@ class Handler extends ExceptionHandler
 
         if ($exception instanceof ModelNotFoundException) {
             $model = strtolower(class_basename($exception->getModel()));
-            return $this->errorResponse('Model does not exist', Response::HTTP_NOT_FOUND);
+            return $this->errorResponse('Data does not exist', Response::HTTP_NOT_FOUND);
         }
 
         if ($exception instanceof AuthorizationException) {
