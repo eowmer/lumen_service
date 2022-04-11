@@ -334,3 +334,7 @@
 2022-04-11 21:15:25,907 INFO spawned: 'crond' with pid 18
 2022-04-11 21:15:25,930 INFO exited: crond (exit status 0; not expected)
 2022-04-11 21:15:26,934 INFO gave up: crond entered FATAL state, too many start retries too quickly
+2022-04-11 23:28:23,573 WARN received SIGTERM indicating exit request
+2022-04-11 23:28:23,577 INFO waiting for nginx, php-fpm to die
+2022-04-11 23:28:23,623 INFO stopped: php-fpm (exit status 0)
+2022-04-11 23:28:23,638 INFO stopped: nginx (exit status 0)

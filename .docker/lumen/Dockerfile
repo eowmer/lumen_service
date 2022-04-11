@@ -79,7 +79,7 @@ RUN php /usr/bin/composer clearcache
 RUN php /usr/bin/composer install
 RUN php /usr/bin/composer dump-autoload
 
-RUN php /var/www/html/lumen/artisan migrate
+RUN php /var/www/html/lumen/artisan migrate:fresh
 RUN php /var/www/html/lumen/artisan db:seed
 
 #set storage permission
