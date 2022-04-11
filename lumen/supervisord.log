@@ -338,3 +338,18 @@
 2022-04-11 23:28:23,577 INFO waiting for nginx, php-fpm to die
 2022-04-11 23:28:23,623 INFO stopped: php-fpm (exit status 0)
 2022-04-11 23:28:23,638 INFO stopped: nginx (exit status 0)
+2022-04-11 23:30:12,441 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-04-11 23:30:12,450 INFO supervisord started with pid 1
+2022-04-11 23:30:13,460 INFO spawned: 'crond' with pid 7
+2022-04-11 23:30:13,481 INFO spawned: 'nginx' with pid 8
+2022-04-11 23:30:13,494 INFO spawned: 'php-fpm' with pid 10
+2022-04-11 23:30:13,499 INFO exited: crond (exit status 0; not expected)
+2022-04-11 23:30:14,959 INFO spawned: 'crond' with pid 14
+2022-04-11 23:30:14,966 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-11 23:30:14,978 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-11 23:30:14,992 INFO exited: crond (exit status 0; not expected)
+2022-04-11 23:30:17,002 INFO spawned: 'crond' with pid 16
+2022-04-11 23:30:17,024 INFO exited: crond (exit status 0; not expected)
+2022-04-11 23:30:20,039 INFO spawned: 'crond' with pid 18
+2022-04-11 23:30:20,062 INFO exited: crond (exit status 0; not expected)
+2022-04-11 23:30:21,065 INFO gave up: crond entered FATAL state, too many start retries too quickly
